@@ -68,6 +68,25 @@ public class ClientGUI extends JFrame {
         messagePanel.setBackground(Utilities.TRANSPARENT_COLOR);
         chatPanel.add(messagePanel, BorderLayout.CENTER);
 
+        JLabel message = new JLabel("Random Message");
+        message.setFont(new Font("Inter", Font.BOLD, 18));
+        message.setForeground(Utilities.TEXT_COLOR);
+
+        messagePanel.add(message);
+
+        // Add input panel
+        JPanel inputPanel = new JPanel();
+        inputPanel.setLayout(new BorderLayout());
+        inputPanel.setBackground(Utilities.TRANSPARENT_COLOR);
+
+        JTextField inputField = new JTextField();
+        inputField.setBackground(Utilities.SECONDARY_COLOR);
+        inputField.setBackground(Utilities.TEXT_COLOR);
+        inputField.setFont(new Font("Inter", Font.PLAIN, 18));
+        inputField.setPreferredSize(new Dimension(inputPanel.getWidth(), 50));
+
+        inputPanel.add(inputField, BorderLayout.CENTER);
+        chatPanel.add(inputPanel, BorderLayout.SOUTH);
 
 
         add(chatPanel, BorderLayout.CENTER);
